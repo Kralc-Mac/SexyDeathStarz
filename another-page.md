@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Welcome to another page
+## Welcome to the dark side
 
 _yay_
 
