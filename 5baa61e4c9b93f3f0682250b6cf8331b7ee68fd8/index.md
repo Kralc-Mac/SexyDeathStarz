@@ -100,7 +100,7 @@ end
 
 ### Large image
 
-![haha](thumbnail.png)
+![haha](iamge9.png)
 
 
 ### Definition lists can be used with HTML syntax.
