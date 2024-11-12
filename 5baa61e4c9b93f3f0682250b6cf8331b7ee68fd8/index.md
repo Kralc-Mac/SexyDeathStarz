@@ -100,7 +100,33 @@ end
 
 ### Large image
 
-![haha](image9.png)
+ // open this directory 
+   $myDirectory = opendir("Images");
+ 
+   // get each entry
+   while($entryName = readdir($myDirectory)) {
+   $dirArray[] = $entryName;
+   }
+ 
+   // close directory
+   closedir($myDirectory);
+ 
+   //	count elements in array
+   $indexCount	= count($dirArray);
+ 
+   ?>
+ 
+   <ul>
+ 
+   <?php
+   // loop through the array of files and print them all in a list
+   for($index=0; $index < $indexCount; $index++) {
+   $extension = substr($dirArray[$index], -3);
+   if ($extension == 'png'){ // list only png
+   echo '<li><img src="images/' . $dirArray[$index] . '" alt="Image" /><span>' . $dirArray[$index] . '</span>';
+   } 
+   }
+   ?>
 
 
 ### Definition lists can be used with HTML syntax.
