@@ -100,6 +100,7 @@ end
 
 ### Large image
 
+<?php
  // open this directory 
    $myDirectory = opendir("Images");
  
