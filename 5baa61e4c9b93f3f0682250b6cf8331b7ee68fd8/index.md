@@ -128,6 +128,7 @@ end
    } 
    }
    ?>
+   </ul> 
 
 
 ### Definition lists can be used with HTML syntax.
