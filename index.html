@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sexy Death Stars</title>
+  <title>Welcome to Sexy Death Stars</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Sexy Death Stars</h1>
-      <p>Explore the most alluring side of the galaxy!</p>
+      <h1>Welcome to Sexy Death Stars</h1>
+      <p>The galaxy's most alluring adventure awaits...</p>
     </header>
     <main>
       <!-- Trimmed YouTube video -->
       <div class="video-container">
-        <h2>Watch this teaser:</h2>
+        <h2>Teaser Video:</h2>
         <iframe 
           id="video"
           src="https://www.youtube.com/embed/tgbNymZ7vqY?start=10&end=20" 
@@ -32,42 +32,24 @@
         <input type="password" id="password" placeholder="Enter Password">
         <button id="unlock-btn">Unlock</button>
       </div>
-
-      <!-- Hidden content -->
-      <div id="hidden-content" class="hidden">
-        <h2>Exclusive Death Stars Gallery</h2>
-        <iframe 
-          id="full-video"
-          src="https://www.youtube.com/embed/tgbNymZ7vqY" 
-          title="Star Wars Full Video"
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
-        <div class="gallery">
-<img src="images/image13.png" alt="image13.png">
-<img src="images/image9.png" alt="image9.png">
-</div>
-      </div>
     </main>
   </div>
 
   <script>
     const passwordInput = document.getElementById("password");
     const unlockBtn = document.getElementById("unlock-btn");
-    const hiddenContent = document.getElementById("hidden-content");
-    const fullVideo = document.getElementById("full-video");
 
-    // Replace with your actual password
-    const correctPassword = "DeathStar123";
+    const correctPassword = "DeathStar123"; // Replace with your password
 
     unlockBtn.addEventListener("click", () => {
       const enteredPassword = passwordInput.value;
       if (enteredPassword === correctPassword) {
-        hiddenContent.classList.remove("hidden");
-        alert("Welcome to the full experience!");
+        // Store a flag in local storage
+        localStorage.setItem("accessGranted", "true");
+        // Redirect to the main page
+        window.location.href = "main.html";
       } else {
-        alert("Incorrect password. Try again!");
+        alert("Incorrect password. Please try again!");
       }
     });
   </script>
