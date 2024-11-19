@@ -54,14 +54,6 @@ button:hover {
   background-color: #e6b800;
 }
 
-.hidden {
-  display: none;
-}
-
-.gallery {
-  margin: 20px 0;
-}
-
 .gallery img {
   width: 30%;
   margin: 5px;
