@@ -1,15 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sexy Death Stars</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sexy Death Stars</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Sexy Death Stars</h1>
-<div class="gallery">
-<img src="images/image9.png" alt="image9.png">
-</div>
+  <div class="container">
+    <header>
+      <h1>Sexy Death Stars</h1>
+      <p>Explore the most alluring side of the galaxy!</p>
+    </header>
+    <main>
+      <!-- Trimmed YouTube video -->
+      <div class="video-container">
+        <h2>Watch this teaser:</h2>
+        <iframe 
+          id="video"
+          src="https://www.youtube.com/embed/tgbNymZ7vqY?start=10&end=20" 
+          title="Star Wars Teaser"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- Password input -->
+      <div class="password-container">
+        <p>Enter the password to unlock the full experience:</p>
+        <input type="password" id="password" placeholder="Enter Password">
+        <button id="unlock-btn">Unlock</button>
+      </div>
+
+      <!-- Hidden content -->
+      <div id="hidden-content" class="hidden">
+        <h2>Exclusive Death Stars Gallery</h2>
+        <iframe 
+          id="full-video"
+          src="https://www.youtube.com/embed/tgbNymZ7vqY" 
+          title="Star Wars Full Video"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+        <div class="gallery">
+          <img src="image9.png" alt="Sexy Death Star 1">
+          <img src="image13.png" alt="Sexy Death Star 2">
+          <img src="image35.png" alt="Sexy Death Star 3">
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const passwordInput = document.getElementById("password");
+    const unlockBtn = document.getElementById("unlock-btn");
+    const hiddenContent = document.getElementById("hidden-content");
+    const fullVideo = document.getElementById("full-video");
+
+    // Replace with your actual password
+    const correctPassword = "DeathStar";
+
+    unlockBtn.addEventListener("click", () => {
+      const enteredPassword = passwordInput.value;
+      if (enteredPassword === correctPassword) {
+        hiddenContent.classList.remove("hidden");
+        alert("Welcome to the full experience!");
+      } else {
+        alert("Incorrect password. Try again!");
+      }
+    });
+  </script>
 </body>
 </html>
