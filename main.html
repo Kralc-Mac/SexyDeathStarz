@@ -25,7 +25,7 @@
         <h2>Full Video:</h2>
         <iframe 
           id="full-video"
-          src="https://www.youtube.com/watch?v=zGwszApFEcY" 
+          src="https://youtu.be/zGwszApFEcY?si=pL3exIa22Be08wiE" 
           title="Star Wars Full Video"
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -35,17 +35,30 @@
 
       <!-- Image Gallery -->
       <div class="image-table-container">
-      <table class="image-table">
-        <thead>
-          <tr>
-            <th>Image</th>
-            <th>Name</th>
-          </tr>
-        </thead>
-        <tbody>
-<tr><td><img src="images/image13.png" alt="image13.png"></td><td>image13.png</td></tr><tr><td><img src="images/image35.png" alt="image35.png"></td><td>image35.png</td></tr><tr><td><img src="images/image9.png" alt="image9.png"></td><td>image9.png</td></tr></tbody>
-      </table>
-    </div>
+  <table class="image-table">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Dynamic rows will be populated here by the script -->
+      <!-- Example of a dynamic row with click-to-enlarge functionality -->
+      <tr>
+        <td><img src="images/death_star_1.jpg" alt="death_star_1" onclick="openModal('images/death_star_1.jpg')"></td>
+        <td>death_star_1.jpg</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal for enlarged images -->
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="enlargedImage">
+  <div id="caption"></div>
+</div>
     </main>
   </div>
 </body>
