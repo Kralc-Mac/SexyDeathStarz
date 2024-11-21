@@ -65,3 +65,48 @@ button:hover {
   transform: scale(1.05);
   transition: transform 0.2s ease-in-out;
 }
+
+/* Scrollable table container */
+.image-table-container {
+  margin: 20px 0;
+  overflow-x: auto; /* Enables horizontal scrolling for smaller screens */
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  background-color: #161b22;
+}
+
+/* Table styling */
+.image-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  color: #c9d1d9;
+}
+
+.image-table th,
+.image-table td {
+  padding: 10px;
+  border: 1px solid #30363d;
+}
+
+.image-table th {
+  background-color: #0d1117;
+  color: #58a6ff;
+}
+
+.image-table td {
+  background-color: #161b22;
+}
+
+.image-table img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .image-table img {
+    width: 70px;
+  }
+}
