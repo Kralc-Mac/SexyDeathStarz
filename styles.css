@@ -67,12 +67,15 @@ button:hover {
 }
 
 /* Scrollable table container */
+/* Scrollable table container */
 .image-table-container {
-  margin: 20px 0;
-  overflow-x: auto; /* Enables horizontal scrolling for smaller screens */
+  max-height: 300px; /* Fixed height for the table container */
+  overflow-y: auto; /* Enables vertical scrolling */
   border: 1px solid #30363d;
   border-radius: 8px;
   background-color: #161b22;
+  margin: 20px auto;
+  padding: 10px;
 }
 
 /* Table styling */
@@ -92,6 +95,7 @@ button:hover {
 .image-table th {
   background-color: #0d1117;
   color: #58a6ff;
+  text-align: center;
 }
 
 .image-table td {
