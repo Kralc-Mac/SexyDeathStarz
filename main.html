@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sexy Death Stars</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <script>
+    // Redirect to landing page if access isn't granted
+    if (localStorage.getItem("accessGranted") !== "true") {
+      alert("You must enter the password to access this page.");
+      window.location.href = "index.html";
+    }
+  </script>
+  <div class="container">
+    <header>
+      <h1>Sexy Death Stars</h1>
+      <p>Enjoy the full galactic experience!</p>
+    </header>
+    <main>
+      <!-- Full YouTube video -->
+      <div class="video-container">
+        <h2>Full Video:</h2>
+        <iframe 
+          id="full-video"
+          src="https://www.youtube.com/embed/zGwszApFEcY" 
+          title="Star Wars Full Video"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- Image Gallery -->
+      <div class="image-table-container">
+  <table class="image-table">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr><td><img src="images/image13.png" alt="image13.png" onclick="openModal('images/image13.png')"></td><td>image13.png</td></tr><tr><td><img src="images/image35.png" alt="image35.png" onclick="openModal('images/image35.png')"></td><td>image35.png</td></tr><tr><td><img src="images/image9.png" alt="image9.png" onclick="openModal('images/image9.png')"></td><td>image9.png</td></tr></tbody>
+  </table>
+</div>
+</main>
+
+<!-- Modal for enlarged images -->
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="enlargedImage">
+  <div id="caption"></div>
+</div>
+  </div>
+<script src="scripts.js"></script>
+</body>
+</html>
