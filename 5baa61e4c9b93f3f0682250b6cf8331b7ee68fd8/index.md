@@ -10,4 +10,4 @@ src="https://www.youtube.com/embed/zGwszApFEcY?autoplay=1&mute=1">
 
 ## THE FOLLOWING IMAGES SHOW DEATH STAR VULNERABILITIES. THE DEATH STAR SHOULD BE TARGETED HERE
 
-
+<img src="image9.png" alt="We gotta hit it here">
